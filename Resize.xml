@@ -1,0 +1,32 @@
+<WaNoTemplate>
+    <WaNoMeta>
+        <Author>
+            <Name> J. Schaarschmidt </Name>
+        </Author>
+
+        <Description>
+            This script applies a specified strain to a crystal structure from a trajectory file and saves the strained structure's details.
+        </Description>
+
+    </WaNoMeta>
+
+    <WaNoRoot name="Resize">
+        <WaNoFile logical_filename="relax.pwo" name="relax pwo">relax</WaNoFile>
+        <WaNoString name="Strain value">Enter strain value</WaNoString>
+    </WaNoRoot>
+
+    <WaNoExecCommand>
+        simstack_server_mamba_source
+        conda activate qe
+        python resize.py
+    </WaNoExecCommand>
+
+    <WaNoInputFiles>
+        <WaNoInputFile logical_filename="resize.py">resize.py</WaNoInputFile>
+    </WaNoInputFiles>
+
+    <WaNoOutputFiles>
+        <WaNoOutputFile>structure_strain.traj</WaNoOutputFile>
+        <WaNoOutputFile>output_dict.yml</WaNoOutputFile>
+    </WaNoOutputFiles>
+</WaNoTemplate>

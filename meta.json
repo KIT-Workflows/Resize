@@ -1,0 +1,16 @@
+{
+    "workflow_environment":"SimStack",
+    "title": "Resize",
+    "description": "This is a WaNo for creating optimized structure",
+    "authors": [
+        "J. Schaarschmidt",
+        "A. Buldin"
+    ],
+    "version": "0.0.1",
+    "logo": "Resize.png",
+    "keywords": [
+        "SimStack",
+        "WaNo",
+        "Resize"
+    ]
+}
