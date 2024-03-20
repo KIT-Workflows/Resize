@@ -11,7 +11,7 @@
     </WaNoMeta>
 
     <WaNoRoot name="Resize">
-        <WaNoFile logical_filename="output.pwo" name="output pwo file from QE_jobs Relaxation">relax</WaNoFile>
+        <WaNoFile logical_filename="output.pwo" name="output pwo file from QE_jobs Relaxation">output.pwo</WaNoFile>
         <WaNoString name="Strain value">Enter strain value</WaNoString>
     </WaNoRoot>
 
