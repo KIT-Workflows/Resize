@@ -1,7 +1,11 @@
+import os
 import yaml
 
 from ase.io import read
 from pwtools import io
+
+
+os.environ['ESPRESSO_PSEUDO'] = os.getenv('PSEUDOPOTENTIALS_PATH', os.getcwd())
 
 
 def create_optimized_structure():
@@ -14,7 +18,7 @@ def create_optimized_structure():
     writes it to a trajectory file named 'optimized_structure.traj'.
     """
 
-    structure_opt = io.read_pw_md('relax.pwo')[-1].get_ase_atoms()
+    structure_opt = io.read_pw_md('output.pwo')[-1].get_ase_atoms()
     structure_opt.write('optimized_structure.traj')
 
 

@@ -11,13 +11,14 @@
     </WaNoMeta>
 
     <WaNoRoot name="Resize">
-        <WaNoFile logical_filename="relax.pwo" name="relax pwo">relax</WaNoFile>
+        <WaNoFile logical_filename="output.pwo" name="output pwo file from QE_jobs Relaxation">relax</WaNoFile>
         <WaNoString name="Strain value">Enter strain value</WaNoString>
     </WaNoRoot>
 
     <WaNoExecCommand>
         simstack_server_mamba_source
         conda activate qe
+        export PSEUDOPOTENTIALS_PATH="{{- wano.pseudopotentials_path -}}"
         python resize.py
     </WaNoExecCommand>
 
